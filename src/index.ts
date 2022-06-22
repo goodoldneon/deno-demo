@@ -10,7 +10,7 @@ async function serveHttp(conn: Deno.Conn) {
   const httpConn = Deno.serveHttp(conn);
 
   for await (const requestEvent of httpConn) {
-    const body = "Hello";
+    const body = "Hello!";
 
     requestEvent.respondWith(
       new Response(body, {
